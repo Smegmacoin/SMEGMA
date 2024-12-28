@@ -13,6 +13,20 @@ body {
     overflow: hidden;
 }
 
+/* Orientation warning styling */
+#orientation-warning {
+    font-size: 1em;
+    color: yellow;
+    background-color: black;
+    padding: 10px;
+    border-bottom: 1px solid yellow;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 /* Styling for the output text */
 #output {
     white-space: pre-wrap;
