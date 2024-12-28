@@ -1,62 +1,67 @@
 /* General body styling */
 body {
-    background-color: black; /* Black background */
-    color: white; /* White text for contrast */
-    font-family: monospace; /* Console-like font */
+    background-color: black;
+    color: white;
+    font-family: monospace;
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: center; /* Vertically align content */
-    align-items: center; /* Horizontally align content */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    height: 100vh; /* Full viewport height */
-    margin: 0; /* Remove default body margin */
-    overflow: hidden; /* Prevent scrollbars */
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
 }
 
 /* Styling for the output text */
 #output {
-    white-space: pre-wrap; /* Preserve line breaks */
-    font-size: 1.2em; /* Adjusted for visibility */
-    margin-bottom: 15px; /* Space between output and definition */
-    max-width: 95%; /* Ensure it fits on smaller screens */
-    word-wrap: break-word; /* Break long lines */
+    white-space: pre-wrap;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    max-width: 95%;
+    word-wrap: break-word;
 }
 
 /* Styling for the definition text */
 #definition {
-    font-size: 1em; /* Definition text size */
-    color: lightgray; /* Secondary text color */
-    max-width: 90%; /* Keep within mobile width */
-    line-height: 1.5; /* Improve readability */
-    padding: 0 10px; /* Add padding for mobile */
-    box-sizing: border-box; /* Include padding in width */
+    font-size: 1em;
+    color: lightgray;
+    max-width: 90%;
+    line-height: 1.5;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+/* Styling for the link container */
+#link-container {
+    display: none; /* Hidden until text finishes typing */
+    margin-top: 20px;
 }
 
 /* Styling for the external link */
 #external-link {
     font-size: 1em;
-    color: #00f; /* Blue for standard links */
-    text-decoration: underline; /* Standard underline for links */
-    margin-top: 20px; /* Space from the definition text */
-    display: block;
+    color: #00f;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 #external-link:hover {
-    color: #f00; /* Red on hover */
-    text-decoration: none; /* Remove underline on hover */
+    color: #f00;
+    text-decoration: none;
 }
 
 /* Small screen adjustments */
 @media (max-width: 600px) {
     #output {
-        font-size: 1em; /* Adjust output text size for small screens */
+        font-size: 1em;
     }
 
     #definition {
-        font-size: 0.9em; /* Adjust definition size */
+        font-size: 0.9em;
     }
 
     #external-link {
-        font-size: 0.9em; /* Adjust link size for mobile */
+        font-size: 0.9em;
     }
 }
