@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub-Zero Typing Effect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        // Sub-Zero Font Text for "SMEGMA"
+        const subZeroText = [
+            "  ______     __    __     ______     ______     __    __     ______    ",
+            " /\\  ___\\   /\\ \"-./  \\   /\\  ___\\   /\\  ___\\   /\\ \"-./  \\   /\\  __ \\   ",
+            " \\ \\___  \\  \\ \\ \\-./\\ \\  \\ \\  __\\   \\ \\ \\__ \\  \\ \\ \\-./\\ \\  \\ \\  __ \\  ",
+            "  \\/\\_____\\  \\ \\_\\ \\ \\_\\  \\ \\_____\\  \\ \\_____\\  \\ \\_\\ \\ \\_\\  \\ \\_\\ \\_\\ ",
+            "   \\/_____/   \\/_/  \\/_/   \\/_____/   \\/_____/   \\/_/  \\/_/   \\/_/\\/_/ "
+        ];
+
+        // Typing Effect Function
+        async function typeText(lines, element, delay = 50) {
+            for (const line of lines) {
+                for (const char of line) {
+                    element.textContent += char; // Add one character at a time
+                    await new Promise(r => setTimeout(r, delay)); // Wait before adding next character
+                }
+                element.textContent += "\n"; // Move to the next line after completing one row
+            }
+        }
+
+        // Start Typing Effect
+        const outputElement = document.getElementById("output");
+        typeText(subZeroText, outputElement);
+    </script>
+</body>
+</html>
