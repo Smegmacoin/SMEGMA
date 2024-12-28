@@ -5,9 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sub-Zero Typing Effect</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        #output {
+            white-space: pre; /* Preserve spacing for Sub-Zero font */
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        #definition {
+            font-size: 1em;
+            color: lightgray;
+            max-width: 90%; /* Fits on mobile */
+            line-height: 1.5;
+        }
+    </style>
 </head>
 <body>
     <div id="output"></div>
+    <div id="definition"></div>
     <script>
         // Sub-Zero Font Text for "SMEGMA"
         const subZeroText = [
@@ -18,12 +46,15 @@
             "   \\/_____/   \\/_/  \\/_/   \\/_____/   \\/_____/   \\/_/  \\/_/   \\/_/\\/_/ "
         ];
 
+        // Definition Text
+        const definitionText = "A sebaceous secretion in the folds of the skin, especially under a man's foreskin.";
+
         // Typing Effect Function
-        async function typeText(lines, element, delay = 50) {
+        async function typeText(lines, element, delay = 20) { // Set faster delay
             for (const line of lines) {
                 for (const char of line) {
                     element.textContent += char; // Add one character at a time
-                    await new Promise(r => setTimeout(r, delay)); // Wait before adding next character
+                    await new Promise(r => setTimeout(r, delay)); // Faster typing delay
                 }
                 element.textContent += "\n"; // Move to the next line after completing one row
             }
@@ -31,7 +62,10 @@
 
         // Start Typing Effect
         const outputElement = document.getElementById("output");
-        typeText(subZeroText, outputElement);
+        typeText(subZeroText, outputElement).then(() => {
+            // Once typing is complete, show the definition text
+            document.getElementById("definition").textContent = definitionText;
+        });
     </script>
 </body>
 </html>
