@@ -2,34 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Sub-Zero Typing Effect</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             background-color: black;
             color: white;
             font-family: monospace;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
+            text-align: center;
             height: 100vh;
             margin: 0;
-            text-align: center;
+            overflow: hidden;
         }
 
         #output {
-            white-space: pre; /* Preserve spacing for Sub-Zero font */
-            font-size: 1.5em;
+            white-space: pre-wrap;
+            font-size: 1.2em;
             margin-bottom: 20px;
+            max-width: 95%;
         }
 
         #definition {
-            font-size: 1em;
+            font-size: 0.9em;
             color: lightgray;
-            max-width: 90%; /* Fits on mobile */
-            line-height: 1.5;
+            max-width: 90%;
+            line-height: 1.4;
+            padding: 0 10px;
         }
     </style>
 </head>
@@ -37,7 +39,6 @@
     <div id="output"></div>
     <div id="definition"></div>
     <script>
-        // Sub-Zero Font Text for "SMEGMA"
         const subZeroText = [
             "  ______     __    __     ______     ______     __    __     ______    ",
             " /\\  ___\\   /\\ \"-./  \\   /\\  ___\\   /\\  ___\\   /\\ \"-./  \\   /\\  __ \\   ",
@@ -46,24 +47,20 @@
             "   \\/_____/   \\/_/  \\/_/   \\/_____/   \\/_____/   \\/_/  \\/_/   \\/_/\\/_/ "
         ];
 
-        // Definition Text
         const definitionText = "A sebaceous secretion in the folds of the skin, especially under a man's foreskin.";
 
-        // Typing Effect Function
-        async function typeText(lines, element, delay = 20) { // Set faster delay
+        async function typeText(lines, element, delay = 20) {
             for (const line of lines) {
                 for (const char of line) {
-                    element.textContent += char; // Add one character at a time
-                    await new Promise(r => setTimeout(r, delay)); // Faster typing delay
+                    element.textContent += char;
+                    await new Promise(r => setTimeout(r, delay));
                 }
-                element.textContent += "\n"; // Move to the next line after completing one row
+                element.textContent += "\n";
             }
         }
 
-        // Start Typing Effect
         const outputElement = document.getElementById("output");
         typeText(subZeroText, outputElement).then(() => {
-            // Once typing is complete, show the definition text
             document.getElementById("definition").textContent = definitionText;
         });
     </script>
