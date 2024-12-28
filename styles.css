@@ -1,18 +1,29 @@
-/* Body styling */
 body {
-    background-color: black; /* Background color of the page */
+    background-color: black; /* Background color */
     color: white; /* Text color */
-    font-family: monospace; /* Monospaced font for console-like feel */
-    display: flex; /* Center align the content */
+    font-family: monospace; /* Console-like font */
+    display: flex; /* Flexbox for centering */
     justify-content: center; /* Horizontally center content */
     align-items: center; /* Vertically center content */
+    flex-direction: column; /* Stack elements vertically */
     height: 100vh; /* Full viewport height */
     margin: 0; /* Remove default margins */
-    text-align: center; /* Center the text */
+    text-align: center; /* Center-align text */
+    overflow: hidden; /* Prevent overflow on smaller screens */
 }
 
-/* Output container styling */
 #output {
-    white-space: pre; /* Preserve spacing in Sub-Zero font */
-    font-size: 1.5em; /* Adjust the font size */
+    white-space: pre; /* Preserve spacing for Sub-Zero font */
+    font-size: 1.2em; /* Slightly smaller font for better fit */
+    margin-bottom: 20px;
+    word-break: break-word; /* Allow wrapping if needed */
+    max-width: 100%; /* Prevent overflow */
+}
+
+#definition {
+    font-size: 0.9em; /* Adjust size for smaller screens */
+    color: lightgray;
+    max-width: 90%; /* Fit definition within the screen width */
+    line-height: 1.4; /* Better readability */
+    padding: 0 10px; /* Add horizontal padding for mobile */
 }
