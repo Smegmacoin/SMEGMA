@@ -4,40 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Sub-Zero Typing Effect</title>
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: monospace;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
-        }
-
-        #output {
-            white-space: pre-wrap;
-            font-size: 1.2em;
-            margin-bottom: 20px;
-            max-width: 95%;
-        }
-
-        #definition {
-            font-size: 0.9em;
-            color: lightgray;
-            max-width: 90%;
-            line-height: 1.4;
-            padding: 0 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="output"></div>
     <div id="definition"></div>
+    <a id="external-link" href="https://www.google.com/search?q=nasty+smegma+nsfw&sca_esv=2e15a7c0979ef63c&rlz=1C5CHFA_enUS1112US1112&udm=2&biw=1200&bih=688&sxsrf=ADLYWILoYMGeYiqJOGabGA2nVlGVz8bj7g%3A1735426171442&ei=e4BwZ83cGrSgur8PppnxqAM&ved=0ahUKEwiNhu6jxsuKAxU0kO4BHaZMHDUQ4dUDCBE&uact=5&oq=nasty+smegma+nsfw&gs_lp=EgNpbWciEW5hc3R5IHNtZWdtYSBuc2Z3SPggUPIWWMsccAN4AJABAJgBM6ABqwKqAQE2uAEDyAEA-AEBmAIAoAIAmAMAiAYBkgcAoAeOAg&sclient=img#vhid=wpX8_NpC3no7UM&vssid=mosaic" target="_blank">Click here to learn more</a>
     <script>
         const subZeroText = [
             "  ______     __    __     ______     ______     __    __     ______    ",
@@ -49,11 +21,11 @@
 
         const definitionText = "A sebaceous secretion in the folds of the skin, especially under a man's foreskin.";
 
-        async function typeText(lines, element, delay = 20) {
+        async function typeText(lines, element, delay = 15) {
             for (const line of lines) {
                 for (const char of line) {
                     element.textContent += char;
-                    await new Promise(r => setTimeout(r, delay));
+                    await new Promise(r => setTimeout(r, delay)); // Fast typing delay
                 }
                 element.textContent += "\n";
             }
