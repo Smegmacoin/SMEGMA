@@ -9,9 +9,11 @@
 <body>
     <div id="output"></div>
     <div id="definition"></div>
-    <a id="external-link" href="https://www.google.com/search?q=nasty+smegma+nsfw&sca_esv=2e15a7c0979ef63c&rlz=1C5CHFA_enUS1112US1112&udm=2&biw=1200&bih=688&sxsrf=ADLYWILoYMGeYiqJOGabGA2nVlGVz8bj7g%3A1735426171442&ei=e4BwZ83cGrSgur8PppnxqAM&ved=0ahUKEwiNhu6jxsuKAxU0kO4BHaZMHDUQ4dUDCBE&uact=5&oq=nasty+smegma+nsfw&gs_lp=EgNpbWciEW5hc3R5IHNtZWdtYSBuc2Z3SPggUPIWWMsccAN4AJABAJgBM6ABqwKqAQE2uAEDyAEA-AEBmAIAoAIAmAMAiAYBkgcAoAeOAg&sclient=img#vhid=wpX8_NpC3no7UM&vssid=mosaic" target="_blank">
-        Click here to learn more
-    </a>
+    <div id="link-container">
+        <a id="external-link" href="https://www.google.com/search?q=nasty+smegma+nsfw&sca_esv=2e15a7c0979ef63c&rlz=1C5CHFA_enUS1112US1112&udm=2&biw=1200&bih=688&sxsrf=ADLYWILoYMGeYiqJOGabGA2nVlGVz8bj7g%3A1735426171442&ei=e4BwZ83cGrSgur8PppnxqAM&ved=0ahUKEwiNhu6jxsuKAxU0kO4BHaZMHDUQ4dUDCBE&uact=5&oq=nasty+smegma+nsfw&gs_lp=EgNpbWciEW5hc3R5IHNtZWdtYSBuc2Z3SPggUPIWWMsccAN4AJABAJgBM6ABqwKqAQE2uAEDyAEA-AEBmAIAoAIAmAMAiAYBkgcAoAeOAg&sclient=img#vhid=wpX8_NpC3no7UM&vssid=mosaic" target="_blank">
+            Click here to learn more
+        </a>
+    </div>
     <script>
         const subZeroText = [
             "  ______     __    __     ______     ______     __    __     ______    ",
@@ -36,6 +38,7 @@
         const outputElement = document.getElementById("output");
         typeText(subZeroText, outputElement).then(() => {
             document.getElementById("definition").textContent = definitionText;
+            document.getElementById("link-container").style.display = "block"; // Show the link
         });
     </script>
 </body>
