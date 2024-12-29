@@ -1,4 +1,4 @@
-/* Body Styling */
+/* General body styling */
 body {
     margin: 0;
     padding: 0;
@@ -31,20 +31,21 @@ body {
 
 /* Content Styling */
 #content {
-    margin-top: 50px; /* Adjust below orientation warning */
+    margin-top: 50px; /* Push content below the warning */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 50px); /* Fit below orientation warning */
-    overflow-y: auto;
+    height: calc(100vh - 50px); /* Ensure content fits below the warning */
+    width: 90%;
+    max-width: 1170px; /* Matches the screen width */
+    overflow-y: auto; /* Allow scrolling for small screens */
 }
 
 /* Text Output */
 #output {
     white-space: pre-wrap;
-    font-size: 1.2em;
-    max-width: 90%;
+    font-size: 1.8em; /* Scaled for 6.1-inch screen */
     word-wrap: break-word;
 }
 
@@ -53,8 +54,9 @@ body {
     font-size: 1em;
     color: lightgray;
     margin-top: 20px;
-    max-width: 90%;
     line-height: 1.5;
+    text-align: center;
+    max-width: 90%;
 }
 
 /* External Link */
@@ -70,10 +72,10 @@ body {
     text-decoration: none;
 }
 
-/* Responsive Design for Smaller Screens */
-@media (max-width: 600px) {
+/* Adjustments for 6.1-inch Screen */
+@media (max-width: 1170px) {
     #output {
-        font-size: 1em;
+        font-size: 1.6em;
     }
 
     #definition {
@@ -82,5 +84,17 @@ body {
 
     #external-link {
         font-size: 0.9em;
+    }
+}
+
+/* Adjustments for Landscape Mode */
+@media (orientation: landscape) {
+    #content {
+        height: calc(100vh - 50px);
+        justify-content: center;
+    }
+
+    #output {
+        font-size: 1.4em;
     }
 }
