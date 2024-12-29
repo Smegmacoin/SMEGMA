@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>SMEGMA COIN</title> <!-- Updated Title -->
+    <title>SMEGMA COIN</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="orientation-warning">Please turn your phone sideways for the best experience.</div>
-    <div id="output"></div>
-    <div id="definition"></div>
-    <div id="link-container">
-        <a id="external-link" href="https://www.google.com/search?q=nasty+smegma+nsfw&sca_esv=2e15a7c0979ef63c&rlz=1C5CHFA_enUS1112US1112&udm=2&biw=1200&bih=688&sxsrf=ADLYWILoYMGeYiqJOGabGA2nVlGVz8bj7g%3A1735426171442&ei=e4BwZ83cGrSgur8PppnxqAM&ved=0ahUKEwiNhu6jxsuKAxU0kO4BHaZMHDUQ4dUDCBE&uact=5&oq=nasty+smegma+nsfw&gs_lp=EgNpbWciEW5hc3R5IHNtZWdtYSBuc2Z3SPggUPIWWMsccAN4AJABAJgBM6ABqwKqAQE2uAEDyAEA-AEBmAIAoAIAmAMAiAYBkgcAoAeOAg&sclient=img#vhid=wpX8_NpC3no7UM&vssid=mosaic" target="_blank">
-            Click here to learn more
+    <div id="content">
+        <pre id="output">
+        </pre>
+        <div id="definition">A sebaceous secretion in the folds of the skin, especially under a man's foreskin.</div>
+        <a id="external-link" href="https://www.google.com/search?q=nasty+smegma+nsfw" target="_blank">
+            Learn More
         </a>
     </div>
     <script>
@@ -24,9 +25,7 @@
             "   \\/_____/   \\/_/  \\/_/   \\/_____/   \\/_____/   \\/_/  \\/_/   \\/_/\\/_/ "
         ];
 
-        const definitionText = "A sebaceous secretion in the folds of the skin, especially under a man's foreskin.";
-
-        async function typeText(lines, element, delay = 15) {
+        async function typeText(lines, element, delay = 20) {
             for (const line of lines) {
                 for (const char of line) {
                     element.textContent += char;
@@ -37,10 +36,7 @@
         }
 
         const outputElement = document.getElementById("output");
-        typeText(subZeroText, outputElement).then(() => {
-            document.getElementById("definition").textContent = definitionText;
-            document.getElementById("link-container").style.display = "block"; // Show the link
-        });
+        typeText(subZeroText, outputElement);
     </script>
 </body>
 </html>
