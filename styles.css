@@ -14,7 +14,7 @@ body {
 
 /* Main content container */
 #content {
-    padding: 10px; /* Balanced padding for spacing */
+    padding: 10px; /* Add some balanced spacing */
     position: relative;
 }
 
@@ -22,11 +22,11 @@ body {
 #ascii-art {
     font-size: 0.16em; /* Adjusted size for readability */
     line-height: 1; /* Compact line spacing */
-    margin: 0; /* Remove unnecessary margins */
-    padding: 0; /* Ensure flush alignment */
+    margin: 0; /* Ensure no extra margins */
+    padding: 0; /* Flush alignment */
     text-align: left; /* Align text fully to the left */
     white-space: pre-wrap; /* Preserve ASCII structure */
-    overflow-wrap: break-word; /* Prevent overflow */
+    word-wrap: break-word; /* Prevent overflow */
     overflow: hidden; /* Ensure no horizontal scrolling */
 }
 
