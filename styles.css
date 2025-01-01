@@ -14,35 +14,35 @@ body {
 
 /* Main content container */
 #content {
-    padding: 0; /* Remove unnecessary padding */
+    padding: 0; /* Remove padding for precise alignment */
     position: relative;
 }
 
 /* ASCII art styling */
 #ascii-art {
-    font-size: 0.16em; /* Balanced size to fit within the screen */
+    font-size: 0.18em; /* Maintain readability while ensuring it fits */
     line-height: 1; /* Compact line spacing */
-    margin: 0; /* Remove all margins */
-    padding: 0; /* Remove padding for extreme left alignment */
-    text-align: left; /* Align text fully to the left */
-    white-space: pre-wrap; /* Preserve ASCII art structure */
-    overflow-wrap: break-word; /* Prevent overflow on small screens */
-    overflow: hidden; /* Prevent horizontal scrolling */
+    margin-left: 0px; /* Fully align to the left edge */
+    margin-right: auto; /* Prevent overflow to the right */
+    text-align: left; /* Align text to the left */
+    white-space: pre-wrap; /* Preserve ASCII structure */
+    word-wrap: break-word; /* Prevent overflow */
+    overflow: hidden; /* No horizontal scrolling */
 }
 
 /* Quote styling */
 #quote {
     font-size: 0.8em;
     line-height: 1.4;
-    margin-top: 10px; /* Consistent spacing below ASCII art */
-    margin-left: 0px; /* Fully align with ASCII art */
+    margin-top: 10px; /* Keep spacing from ASCII art */
+    margin-left: 0px; /* Align flush with ASCII art */
     transition: opacity 0.5s ease-in; /* Smooth fade-in effect */
 }
 
 /* Link section styling */
 #link-section {
     margin-top: 20px;
-    margin-left: 0px; /* Fully align with the rest of the content */
+    margin-left: 0px; /* Align flush with the rest of the content */
     transition: opacity 0.5s ease-in; /* Smooth fade-in effect */
 }
 
