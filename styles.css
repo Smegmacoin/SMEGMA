@@ -9,6 +9,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
 }
 
 /* Main content container */
@@ -19,18 +20,18 @@ body {
 
 /* ASCII art styling */
 #ascii-art {
-    font-size: 0.6em; /* Reduced to half size */
-    line-height: 1.2; /* Compact line spacing */
-    margin-bottom: -10px; /* Pull closer to the quote */
-    text-align: left; /* Align flush left */
-    margin-left: 10px; /* Maintain flush left position */
+    font-size: 0.4em; /* Reduced size to ensure it fits on the screen */
+    line-height: 1; /* Compact line spacing */
+    margin-bottom: 10px; /* Adjust spacing above the quote */
+    text-align: left; /* Align to the left */
+    margin-left: 10px; /* Push slightly to the left */
 }
 
 /* Quote styling */
 #quote {
     font-size: 0.8em;
     line-height: 1.4;
-    margin-top: 20px; /* Keep the quote as-is */
+    margin-top: 20px; /* Keep the quote’s position as-is */
     margin-left: 10px; /* Align with ASCII art */
 }
 
