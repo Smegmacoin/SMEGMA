@@ -20,7 +20,7 @@ body {
 
 /* ASCII art styling */
 #ascii-art {
-    font-size: 0.13em; /* Reduced size to 0.13em */
+    font-size: 0.18em; /* Maintain current size */
     line-height: 1; /* Compact line spacing */
     margin: 0; /* Remove all margins */
     padding: 0; /* Remove padding for extreme alignment */
