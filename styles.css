@@ -7,40 +7,48 @@ body {
     font-family: monospace;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
     height: 100vh;
     overflow: hidden; /* Prevent scrolling */
 }
 
 /* Main content container */
 #content {
-    text-align: left;
+    padding: 10px;
+    position: relative;
 }
 
 /* ASCII art styling */
 #ascii-art {
-    font-size: 0.8em; /* Adjust size as needed */
-    line-height: 1;
-    margin: 0;
-    white-space: pre;
+    font-size: 0.21em; /* Reduced size by 30% */
+    line-height: 1; /* Compact line spacing */
+    margin-bottom: 10px; /* Space between ASCII art and the quote */
+    text-align: left; /* Align to the left */
+    margin-left: 0px; /* Flush to the left edge */
+    white-space: pre-wrap; /* Preserve whitespace for ASCII art */
+    word-wrap: break-word;
 }
 
 /* Quote styling */
 #quote {
-    font-size: 1em;
-    margin-top: 20px;
+    font-size: 0.8em;
+    line-height: 1.4;
+    margin-top: 10px; /* Consistent spacing from the ASCII art */
+    margin-left: 0px; /* Align with ASCII art */
+    transition: opacity 0.5s ease-in; /* Smooth fade-in effect */
 }
 
 /* Link section styling */
 #link-section {
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-left: 0px; /* Align flush with the rest of the content */
+    transition: opacity 0.5s ease-in; /* Smooth fade-in effect */
 }
 
 #link-section a {
     color: #00f;
     text-decoration: underline;
-    font-size: 1em;
+    font-size: 0.8em;
 }
 
 #link-section a:hover {
