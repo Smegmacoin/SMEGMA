@@ -20,7 +20,7 @@ body {
 
 /* ASCII art styling */
 #ascii-art {
-    font-size: 0.18em; /* Further reduced size to fit on smaller screens */
+    font-size: calc(5vw); /* Dynamically adjust size based on screen width */
     line-height: 1; /* Compact line spacing */
     margin-bottom: 10px; /* Space between ASCII art and the quote */
     text-align: left; /* Align to the left */
@@ -31,7 +31,7 @@ body {
 
 /* Quote styling */
 #quote {
-    font-size: 0.8em;
+    font-size: 1em; /* Adjusted for balance with smaller ASCII art */
     line-height: 1.4;
     margin-top: 10px; /* Consistent spacing from the ASCII art */
     margin-left: 0px; /* Align with ASCII art */
