@@ -2,55 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMEGMA COIN</title>
+    <title>SMEGMA Typing Effect</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="content">
         <pre id="ascii-art"></pre>
-        <p id="quote" style="opacity: 0;"></p>
-        <div id="link-section" style="opacity: 0;">
-            <a href="https://www.google.com/search?q=nasty+smegma+nsfw" target="_blank">Learn More</a>
+        <div id="quote">
+            "Your quote here."
+        </div>
+        <div id="link-section">
+            <a href="https://smegmacoin.dev">smegmacoin.dev</a>
         </div>
     </div>
-    <script>
-        // Typing effect function
-        async function typeText(element, text, delay = 50) {
-            for (let char of text) {
-                element.textContent += char;
-                await new Promise(resolve => setTimeout(resolve, delay));
-            }
-        }
-
-        async function startTypingEffect() {
-            // ASCII Art content
-            const asciiArt = `
-          ______     __    __     ______     ______     __    __     ______    
-         /\\  ___\\   /\\ "-./  \\   /\\  ___\\   /\\  ___\\   /\\ "-./  \\   /\\  __ \\   
-         \\ \\___  \\  \\ \\ \\-./\\ \\  \\ \\  __\\   \\ \\ \\__ \\  \\ \\ \\-./\\ \\  \\ \\  __ \\  
-          \\/\\_____\\  \\ \\_\\ \\ \\_\\  \\ \\_____\\  \\ \\_____\\  \\ \\_\\ \\ \\_\\  \\ \\_\\ \\_\\ 
-           \\/_____/   \\/_/  \\/_/   \\/_____/   \\/_____/   \\/_/  \\/_/   \\/_/\\/_/ 
-            `;
-            const quoteText =
-                "Within the folds of being, an essence clings, born of nature’s rhythm and neglect.";
-            const asciiArtElement = document.getElementById("ascii-art");
-            const quoteElement = document.getElementById("quote");
-            const linkElement = document.getElementById("link-section");
-
-            // Type ASCII art
-            await typeText(asciiArtElement, asciiArt, 10);
-
-            // Type quote
-            quoteElement.style.opacity = 1;
-            await typeText(quoteElement, quoteText, 50);
-
-            // Fade in link
-            linkElement.style.opacity = 1;
-        }
-
-        // Start typing effect on page load
-        window.onload = startTypingEffect;
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
