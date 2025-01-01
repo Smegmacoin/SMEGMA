@@ -5,37 +5,42 @@ body {
     background-color: black;
     color: white;
     font-family: monospace;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-/* Main content container */
-#content {
-    text-align: center;
-    max-width: 90%;
-}
-
-/* Header styling */
-#header p {
-    font-size: 1em;
-    color: white;
-    margin-bottom: 20px;
+/* Content in the top-left corner */
+#top-left-content {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    max-width: 600px; /* Prevent content from sprawling too far */
+    font-size: 0.9em;
+    line-height: 1.4;
 }
 
 /* ASCII art styling */
-#ascii pre {
+#ascii-art {
     font-size: 1.2em;
-    line-height: 1.5;
-    color: white;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
-/* Footer styling */
-#footer p {
-    font-size: 1em;
-    color: lightgray;
-    margin: 5px 0;
+/* Link section at the bottom */
+#link-section {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+}
+
+#link-section a {
+    color: #00f;
+    text-decoration: underline;
+    font-size: 0.9em;
+}
+
+#link-section a:hover {
+    color: #f00;
+    text-decoration: none;
 }
