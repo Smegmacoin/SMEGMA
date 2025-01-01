@@ -14,16 +14,16 @@ body {
 
 /* Main content container */
 #content {
-    padding: 20px;
+    padding: 10px; /* Reduce padding for a compact layout */
     position: relative;
 }
 
 /* ASCII art styling */
 #ascii-art {
-    font-size: 0.4em; /* Reduced size to ensure it fits on the screen */
+    font-size: 0.3em; /* Keep it small to fit the viewport */
     line-height: 1; /* Compact line spacing */
     margin-bottom: 10px; /* Adjust spacing above the quote */
-    text-align: left; /* Align text to the left */
+    text-align: left; /* Align to the left */
     margin-left: 0px; /* Fully flush to the left */
 }
 
@@ -31,14 +31,14 @@ body {
 #quote {
     font-size: 0.8em;
     line-height: 1.4;
-    margin-top: 20px; /* Keep the quote’s position as-is */
-    margin-left: 0px; /* Fully flush to the left */
+    margin-top: 10px; /* Keep the quote position consistent */
+    margin-left: 0px; /* Align flush with ASCII art */
 }
 
 /* Link section styling */
 #link-section {
     margin-top: 20px;
-    margin-left: 0px; /* Fully flush to the left */
+    margin-left: 0px; /* Align flush with the rest of the content */
 }
 
 #link-section a {
