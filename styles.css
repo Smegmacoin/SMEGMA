@@ -14,31 +14,35 @@ body {
 
 /* Main content container */
 #content {
-    padding: 20px;
+    padding: 10px;
     position: relative;
 }
 
 /* ASCII art styling */
 #ascii-art {
-    font-size: 0.4em; /* Reduced size to ensure it fits on the screen */
+    font-size: 0.21em; /* Reduced size by 30% */
     line-height: 1; /* Compact line spacing */
-    margin-bottom: 10px; /* Adjust spacing above the quote */
-    text-align: left; /* Align text to the left */
-    margin-left: 0px; /* Fully flush to the left */
+    margin-bottom: 10px; /* Space between ASCII art and the quote */
+    text-align: left; /* Align to the left */
+    margin-left: 0px; /* Flush to the left edge */
+    white-space: pre-wrap; /* Preserve whitespace for ASCII art */
+    word-wrap: break-word;
 }
 
 /* Quote styling */
 #quote {
     font-size: 0.8em;
     line-height: 1.4;
-    margin-top: 20px; /* Keep the quote’s position as-is */
-    margin-left: 0px; /* Fully flush to the left */
+    margin-top: 10px; /* Consistent spacing from the ASCII art */
+    margin-left: 0px; /* Align with ASCII art */
+    transition: opacity 0.5s ease-in; /* Smooth fade-in effect */
 }
 
 /* Link section styling */
 #link-section {
     margin-top: 20px;
-    margin-left: 0px; /* Fully flush to the left */
+    margin-left: 0px; /* Align flush with the rest of the content */
+    transition: opacity 0.5s ease-in; /* Smooth fade-in effect */
 }
 
 #link-section a {
