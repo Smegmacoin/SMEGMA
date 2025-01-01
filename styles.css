@@ -6,101 +6,41 @@ body {
     color: white;
     font-family: monospace;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     height: 100vh;
     text-align: center;
-    overflow: hidden;
 }
 
-/* Orientation Warning */
-#orientation-warning {
-    background-color: yellow;
-    color: black;
-    font-size: 1em;
-    width: 100%;
-    padding: 10px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    text-align: center;
-    z-index: 1000;
-}
-
-/* Main Content */
+/* Main Content Container */
 #main-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 50px); /* Subtract warning height */
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
 }
 
-/* Output Container */
-#output-container {
-    width: 100%;
-    max-width: 1100px; /* Ensures text stays readable */
-    overflow: hidden;
-    margin: 20px 0; /* Space around ASCII art */
+/* Header Message Styling */
+#header-message {
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 20px;
+    max-width: 80%;
+    line-height: 1.5;
 }
 
-#output {
-    font-size: 1.6em; /* Scaled for readability */
+/* ASCII Art Styling */
+#ascii-art {
+    font-size: 1.5em;
+    color: white;
     white-space: pre-wrap;
-    word-wrap: break-word;
-    line-height: 1.5em; /* Better vertical spacing for ASCII art */
-    margin: 0 auto;
-    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* Definition Styling */
-#definition {
+/* Footer Message Styling */
+#footer-message {
     font-size: 1em;
     color: lightgray;
-    margin-top: 15px;
-    max-width: 90%;
     line-height: 1.5;
     text-align: center;
-    padding: 0 10px;
-}
-
-/* External Link */
-#external-link {
-    font-size: 1em;
-    color: #00f;
-    margin-top: 10px;
-    text-decoration: underline;
-}
-
-#external-link:hover {
-    color: #f00;
-    text-decoration: none;
-}
-
-/* Responsive Design for 6.1-inch Screens */
-@media (max-width: 1170px) {
-    #output {
-        font-size: 1.4em; /* Adjust font for narrower screens */
-    }
-
-    #definition {
-        font-size: 0.9em;
-    }
-
-    #external-link {
-        font-size: 0.9em;
-    }
-}
-
-/* Adjustments for Landscape Mode */
-@media (orientation: landscape) {
-    #main-content {
-        flex-direction: column;
-        height: calc(100vh - 50px);
-        justify-content: center;
-    }
 }
