@@ -14,16 +14,16 @@ body {
 
 /* Main content container */
 #content {
-    padding: 0px; /* Remove padding to eliminate unnecessary space */
+    padding: 10px; /* Restored padding for balanced spacing */
     position: relative;
 }
 
 /* ASCII art styling */
 #ascii-art {
-    font-size: 0.18em; /* Maintain current size */
+    font-size: 0.18em; /* Restored font size to 0.18em */
     line-height: 1; /* Compact line spacing */
-    margin: 0; /* Remove all margins */
-    padding: 0; /* Remove padding for extreme alignment */
+    margin: 0; /* Remove unnecessary margins */
+    padding: 0; /* Flush alignment */
     text-align: left; /* Align to the left */
     white-space: pre-wrap; /* Preserve whitespace for ASCII art */
     word-wrap: break-word; /* Prevent overflow */
@@ -33,7 +33,7 @@ body {
 #quote {
     font-size: 0.8em;
     line-height: 1.4;
-    margin-top: 10px; /* Keep spacing from ASCII art */
+    margin-top: 10px; /* Consistent spacing from ASCII art */
     margin-left: 0px; /* Align flush with ASCII art */
     transition: opacity 0.5s ease-in; /* Smooth fade-in effect */
 }
