@@ -19,30 +19,35 @@ body {
 
 /* ASCII art styling */
 #ascii-art {
-    font-size: 1em; /* Reduced size for better readability */
-    line-height: 1.2; /* Slightly compact line spacing */
+    font-size: 0.6em; /* Reduced to half its original size */
+    line-height: 1.2; /* Compact line spacing */
     margin-bottom: 20px;
+    text-align: left; /* Align further to the left */
+    margin-left: 10px; /* Push further left */
 }
 
 /* Quote styling */
 #quote {
-    font-size: 0.9em;
+    font-size: 0.8em;
     line-height: 1.4;
     margin-top: 10px;
     margin-bottom: 20px;
+    margin-left: 10px; /* Align with ASCII art */
 }
 
 /* Link section styling */
 #link-section {
     margin-top: 20px;
+    margin-left: 10px; /* Align with the rest of the content */
 }
 
 #link-section a {
     color: #00f;
     text-decoration: underline;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 
 #link-section a:hover {
     color: #f00;
-    text-decoration: none;}
+    text-decoration: none;
+}
