@@ -1,4 +1,4 @@
-/* General Body Styling */
+/* General body styling */
 body {
     margin: 0;
     padding: 0;
@@ -12,35 +12,30 @@ body {
     text-align: center;
 }
 
-/* Main Content Container */
-#main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+/* Main content container */
+#content {
+    text-align: center;
+    max-width: 90%;
 }
 
-/* Header Message Styling */
-#header-message {
+/* Header styling */
+#header p {
+    font-size: 1em;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* ASCII art styling */
+#ascii pre {
     font-size: 1.2em;
-    color: white;
-    margin-bottom: 20px;
-    max-width: 80%;
     line-height: 1.5;
-}
-
-/* ASCII Art Styling */
-#ascii-art {
-    font-size: 1.5em;
     color: white;
-    white-space: pre-wrap;
     margin-bottom: 20px;
 }
 
-/* Footer Message Styling */
-#footer-message {
+/* Footer styling */
+#footer p {
     font-size: 1em;
     color: lightgray;
-    line-height: 1.5;
-    text-align: center;
+    margin: 5px 0;
 }
