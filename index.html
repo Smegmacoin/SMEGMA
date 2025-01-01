@@ -7,39 +7,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="orientation-warning">Rotate your phone sideways for the best view.</div>
     <div id="main-content">
-        <div id="output-container">
-            <pre id="output"></pre>
+        <div id="header-message">
+            <span>Ah, SMEGMA: a natural choice. After all, one cannot achieve intimacy without its silent foundation.</span>
         </div>
-        <div id="definition">
-            A sebaceous secretion in the folds of the skin, especially under a man's foreskin.
+        <pre id="ascii-art">
+          ______     __    __     ______     ______     __    __     ______    
+         /\  ___\   /\ "-./  \   /\  ___\   /\  ___\   /\ "-./  \   /\  __ \   
+         \ \___  \  \ \ \-./\ \  \ \  __\   \ \ \____  \ \ \-./\ \  \ \  __ \  
+          \/\_____\  \ \_\ \ \_\  \ \_____\  \ \_____\  \ \_\ \ \_\  \ \_\ \_\ 
+           \/_____/   \/_/  \/_/   \/_____/   \/_____/   \/_/  \/_/   \/_/\/_/
+        </pre>
+        <div id="footer-message">
+            <span>Initializing analysis...</span><br>
+            <span>Brace yourself for the winds of innovation.</span>
         </div>
-        <a id="external-link" href="https://www.google.com/search?q=nasty+smegma+nsfw" target="_blank">
-            Learn More
-        </a>
     </div>
-    <script>
-        const subZeroText = [
-            "  ______     __    __     ______     ______     __    __     ______    ",
-            " /\\  ___\\   /\\ \"-./  \\   /\\  ___\\   /\\  ___\\   /\\ \"-./  \\   /\\  __ \\   ",
-            " \\ \\___  \\  \\ \\ \\-./\\ \\  \\ \\  __\\   \\ \\ \\__ \\  \\ \\ \\-./\\ \\  \\ \\  __ \\  ",
-            "  \\/\\_____\\  \\ \\_\\ \\ \\_\\  \\ \\_____\\  \\ \\_____\\  \\ \\_\\ \\ \\_\\  \\ \\_\\ \\_\\ ",
-            "   \\/_____/   \\/_/  \\/_/   \\/_____/   \\/_____/   \\/_/  \\/_/   \\/_/\\/_/ "
-        ];
-
-        async function typeText(lines, element, delay = 20) {
-            for (const line of lines) {
-                for (const char of line) {
-                    element.textContent += char;
-                    await new Promise(r => setTimeout(r, delay)); // Typing delay
-                }
-                element.textContent += "\n"; // New line after each row
-            }
-        }
-
-        const outputElement = document.getElementById("output");
-        typeText(subZeroText, outputElement);
-    </script>
 </body>
 </html>
