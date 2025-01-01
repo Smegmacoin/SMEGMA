@@ -14,27 +14,28 @@ body {
 
 /* Main content container */
 #content {
-    padding: 10px;
+    padding: 10px; /* Restore slight padding for spacing */
     position: relative;
 }
 
 /* ASCII art styling */
 #ascii-art {
-    font-size: 0.21em; /* Reduced size by 30% */
+    font-size: 0.16em; /* Adjusted size to fit and match your screenshot */
     line-height: 1; /* Compact line spacing */
-    margin-bottom: 10px; /* Space between ASCII art and the quote */
+    margin: 0; /* Remove any extra margins */
+    padding: 0; /* Ensure flush alignment */
     text-align: left; /* Align to the left */
-    margin-left: 0px; /* Flush to the left edge */
-    white-space: pre-wrap; /* Preserve whitespace for ASCII art */
-    word-wrap: break-word;
+    white-space: pre-wrap; /* Preserve ASCII structure */
+    word-wrap: break-word; /* Prevent overflow */
+    overflow: hidden; /* Ensure no scrolling or cut-off */
 }
 
 /* Quote styling */
 #quote {
     font-size: 0.8em;
     line-height: 1.4;
-    margin-top: 10px; /* Consistent spacing from the ASCII art */
-    margin-left: 0px; /* Align with ASCII art */
+    margin-top: 10px; /* Keep spacing consistent */
+    margin-left: 0px; /* Align flush with ASCII art */
     transition: opacity 0.5s ease-in; /* Smooth fade-in effect */
 }
 
