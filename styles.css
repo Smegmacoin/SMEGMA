@@ -20,18 +20,18 @@ body {
 
 /* ASCII art styling */
 #ascii-art {
-    font-size: calc(5vw); /* Dynamically adjust size based on screen width */
+    font-size: 0.18em; /* Maintain the reduced size */
     line-height: 1; /* Compact line spacing */
     margin-bottom: 10px; /* Space between ASCII art and the quote */
-    text-align: left; /* Align to the left */
-    margin-left: 0px; /* Flush to the left edge */
+    text-align: left; /* Align text to the left */
+    margin-left: 0px; /* Fully flush to the left edge */
     white-space: pre-wrap; /* Preserve whitespace for ASCII art */
-    word-wrap: break-word; /* Ensure no overflow */
+    word-wrap: break-word; /* Prevent overflow */
 }
 
 /* Quote styling */
 #quote {
-    font-size: 1em; /* Adjusted for balance with smaller ASCII art */
+    font-size: 0.8em;
     line-height: 1.4;
     margin-top: 10px; /* Consistent spacing from the ASCII art */
     margin-left: 0px; /* Align with ASCII art */
