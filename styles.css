@@ -14,23 +14,25 @@ body {
 
 /* Main content container */
 #content {
-    padding: 10px; /* Add balanced padding */
+    padding: 0px; /* Remove padding to eliminate unnecessary space */
     position: relative;
 }
 
 /* ASCII art styling */
 #ascii-art {
-    font-size: 0.18em; /* Restored font size */
+    font-size: 0.14em; /* Slightly reduced size to prevent overflow */
     line-height: 1; /* Compact line spacing */
-    margin: 0; /* Ensure no extra margin */
-    text-align: left; /* Align fully to the left */
+    margin: 0; /* Remove all margins */
+    padding: 0; /* Remove padding for extreme alignment */
+    text-align: left; /* Align to the left */
     white-space: pre-wrap; /* Preserve whitespace for ASCII art */
     word-wrap: break-word; /* Prevent overflow */
+    overflow: hidden; /* Ensure no horizontal scroll */
 }
 
 /* Quote styling */
 #quote {
-    font-size: 0.8em; /* Restored balanced font size */
+    font-size: 0.8em;
     line-height: 1.4;
     margin-top: 10px; /* Consistent spacing from ASCII art */
     margin-left: 0px; /* Align flush with ASCII art */
