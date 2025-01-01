@@ -20,13 +20,13 @@ body {
 
 /* ASCII art styling */
 #ascii-art {
-    font-size: 0.21em; /* Reduced size by 30% */
+    font-size: 0.18em; /* Further reduced size to fit on smaller screens */
     line-height: 1; /* Compact line spacing */
     margin-bottom: 10px; /* Space between ASCII art and the quote */
     text-align: left; /* Align to the left */
     margin-left: 0px; /* Flush to the left edge */
     white-space: pre-wrap; /* Preserve whitespace for ASCII art */
-    word-wrap: break-word;
+    word-wrap: break-word; /* Ensure no overflow */
 }
 
 /* Quote styling */
