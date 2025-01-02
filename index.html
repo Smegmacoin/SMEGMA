@@ -4,15 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMEGMA COIN</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: monospace;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        /* ASCII art styling */
+        #ascii-art {
+            font-size: 0.14em; /* Adjusted for portrait readability */
+            line-height: 1;
+            margin-bottom: 20px;
+            text-align: center;
+            white-space: pre-wrap; /* Preserve formatting */
+            overflow-wrap: break-word; /* Prevent overflow */
+        }
+
+        /* Quote styling */
+        #quote {
+            font-size: 0.9em;
+            line-height: 1.4;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        /* Link section styling */
+        #link-section {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        #link-section a {
+            color: #00f;
+            text-decoration: underline;
+            font-size: 0.9em;
+        }
+
+        #link-section a:hover {
+            color: #f00;
+            text-decoration: none;
+        }
+
+        /* Ensure portrait mode optimization */
+        @media (max-width: 768px) {
+            #ascii-art {
+                font-size: 0.12em; /* Further reduce for smaller screens */
+            }
+
+            #quote {
+                font-size: 0.8em;
+            }
+
+            #link-section a {
+                font-size: 0.8em;
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="content">
         <pre id="ascii-art"></pre>
-        <p id="quote" style="opacity: 0;"></p>
-        <div id="link-section" style="opacity: 0;">
-            <a href="https://www.google.com/search?q=nasty+smegma+dick" target="_blank">Learn More</a>
-            <span style="margin-left: 10px; color: red; font-weight: bold;">18+ NSFW Link</span>
+        <p id="quote"></p>
+        <div id="link-section">
+            <a href="https://www.google.com/search?q=nasty+smegma+dick&sca_esv=2e15a7c0979ef63c&rlz=1C5CHFA_enUS1112US1112&udm=2&biw=393&bih=657&sxsrf=ADLYWIIwusAxiHcuyKvCxUoRB_e3Q29MDg%3A1735702139487&ei=e7Z0Z_-6HfrFkPIPh_STqA4&oq=nasty+smegma+dick&gs_lp=EhJtb2JpbGUtZ3dzLXdpei1pbWciEW5hc3R5IHNtZWdtYSBkaWNrSLgiUKUGWL4gcAZ4AJABAZgBQ6AB3gaqAQIxNbgBA8gBAPgBAZgCB6ACngLCAgQQIxgnmAMAiAYBkgcBN6AH4w4&sclient=mobile-gws-wiz-img" target="_blank">Learn More</a>
         </div>
     </div>
     <script>
@@ -27,11 +91,11 @@
         async function startTypingEffect() {
             // ASCII Art content
             const asciiArt = `
-          ______     __    __     ______     ______     __    __     ______    
-         /\  ___\   /\ "-./  \   /\  ___\   /\  ___\   /\ "-./  \   /\  __ \   
-         \ \___  \  \ \ \-./\ \  \ \  __\   \ \ \__ \  \ \ \-./\ \  \ \  __ \  
-          \/\_____\  \ \_\ \ \_\  \ \_____\  \ \_____\  \ \_\ \ \_\  \ \_\ \_\ 
-           \/_____/   \/_/  \/_/   \/_____/   \/_____/   \/_/  \/_/   \/_/\/_/ 
+  ______     __    __     ______     ______     __    __     ______    
+ /\\  ___\\   /\\ "-./  \\   /\\  ___\\   /\\  ___\\   /\\ "-./  \\   /\\  __ \\   
+ \\ \\___  \\  \\ \\ \\-./\\ \\  \\ \\  __\\   \\ \\ \\__ \\  \\ \\ \\-./\\ \\  \\ \\  __ \\  
+  \\/\\_____\\  \\ \\_\\ \\ \\_\\  \\ \\_____\\  \\ \\_____\\  \\ \\_\\ \\ \\_\\  \\ \\_\\ \\_\\ 
+   \\/_____/   \\/_/  \\/_/   \\/_____/   \\/_____/   \\/_/  \\/_/   \\/_/\\/_/ 
             `;
             const quoteText =
                 "Within the folds of being, an essence clings, born of nature’s rhythm and neglect.";
@@ -43,10 +107,9 @@
             await typeText(asciiArtElement, asciiArt, 10);
 
             // Type quote
-            quoteElement.style.opacity = 1;
             await typeText(quoteElement, quoteText, 50);
 
-            // Fade in link
+            // Show link
             linkElement.style.opacity = 1;
         }
 
